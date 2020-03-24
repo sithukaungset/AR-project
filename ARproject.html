@@ -11,23 +11,25 @@
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
-        <a-assets>
-            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item> 
-        </a-assets>
+        
 
         <a-marker type='barcode' value='7'>
             <a-box position='0 0.5 0' color="yellow"></a-box>
         </a-marker>
 
         <a-marker id="animated-marker" type='barcode' value='6'>
-            <a-entity
-                animation-mixer
-                gltf-model="#animated-asset"
-                scale="2 2 2">
-            </a-entity>
+            
+            <a-entity 
+                  obj-model="obj: url(https://d2z6pp1b5cghw2.cloudfront.net/3f805b32-c95d-4109-b10f-308be54f718f/model.obj); mtl: url(https://d2z6pp1b5cghw2.cloudfront.net/3f805b32-c95d-4109-b10f-308be54f718f/model.mtl);"
+            scale="0.5 0.5 0.5"
+            position="0d 1.5 -2"
+            rotation="0 90 0">
+        </a-entity>
         </a-marker>
 
         <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
+
+
